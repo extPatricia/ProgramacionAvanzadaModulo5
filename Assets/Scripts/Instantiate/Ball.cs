@@ -8,8 +8,16 @@ public class Ball : MonoBehaviour
     [System.NonSerialized]
     public Rigidbody rb;
 
+    public DataKPI kpiData;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (kpiData != null)
+            kpiData.SendData();
     }
 }

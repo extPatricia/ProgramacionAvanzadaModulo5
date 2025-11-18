@@ -7,9 +7,9 @@ public class Dropper : MonoBehaviour
     //Attributes
     public float repeatRate = 1;
     public GameObject ballPrefab;
-  
-	// Start is called before the first frame update
-	void Start()
+
+    // Start is called before the first frame update
+    void Start()
     {
         InvokeRepeating(nameof(Drop), 0, repeatRate);
     }
